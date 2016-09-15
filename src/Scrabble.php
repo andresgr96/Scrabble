@@ -16,54 +16,54 @@
             $input_array = str_split($input_word);
 
               foreach ($input_array as $letter) {
-                foreach ($one_point as $one) {
-                  if($letter === $one) {
+                if (in_array($letter, $one_point))
+                  {
                     $score++;
                   }
-                }
+
               }
               foreach ($input_array as $letter) {
-                foreach ($two_point as $two) {
-                  if($letter === $two) {
+                if (in_array($letter, $two_point))
+                  {
                     $score += 2;
                   }
-                }
+
               }
               foreach ($input_array as $letter) {
-                foreach ($three_point as $three) {
-                  if($letter === $three) {
+                if (in_array($letter, $three_point))
+                  {
                     $score += 3;
                   }
-                }
+
               }
               foreach ($input_array as $letter) {
-                foreach ($four_point as $four) {
-                  if($letter === $four) {
+                if (in_array($letter, $four_point))
+                  {
                     $score += 4;
                   }
-                }
+
               }
               foreach ($input_array as $letter) {
-                foreach ($five_point as $five) {
-                  if($letter === $five) {
+                if (in_array($letter, $five_point))
+                  {
                     $score += 5;
                   }
-                }
+
               }
               foreach ($input_array as $letter) {
-                foreach ($eight_point as $eight) {
-                  if($letter === $eight) {
+                if (in_array($letter, $eight_point))
+                  {
                     $score += 8;
                   }
-                }
+
               }
               foreach ($input_array as $letter) {
-                foreach ($ten_point as $ten) {
-                  if($letter === $ten) {
-                    $score +=10;
+                if (in_array($letter, $ten_point))
+                  {
+                    $score += 10;
                   }
-                }
-             }
+
+              }
              return $score;
         }
       }
